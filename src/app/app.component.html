@@ -1,0 +1,43 @@
+<mat-toolbar color="primary" class="header">
+
+    <img class="logo" src="./assets/images/logo.svg" alt="rick and morty logo">
+    <ul class="menu">
+        <li class="menu__item" routerLink="/characters" routerLinkActive="menu__item--active">
+            <button mat-button>
+                <mat-icon>face</mat-icon>
+                <span>Characters</span>
+            </button>
+        </li>
+        <li class="menu__item" routerLink="/locations" routerLinkActive="menu__item--active">
+            <button mat-button>
+                <mat-icon>run_circle</mat-icon>
+                <span>Locations</span>
+            </button>
+        </li>
+        <li class="menu__item" routerLink="/episodes" routerLinkActive="menu__item--active">
+            <button mat-button>
+                <mat-icon>ondemand_video</mat-icon>
+                <span>Episodes</span>
+            </button>
+        </li>
+    </ul>
+    <div class="dropdown">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item class="dropdown__item">
+                <mat-icon>support_agent</mat-icon>
+                <span>Login</span>
+            </button>
+        </mat-menu>
+    </div>
+
+
+</mat-toolbar>
+
+<div class="container">
+    <router-outlet>
+
+    </router-outlet>
+</div>
